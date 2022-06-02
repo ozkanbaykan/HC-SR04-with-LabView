@@ -18,6 +18,9 @@ It was stated that the main cause of the porpoising problem was the cessation of
 
 ## Step 1: Setting Up HC-SR04
 The sensor has Vin, GND, Trigger and Echo pins. Vin is connected to Arduino's 5V input, GND ground input, Trigger input 9 and Echo input 10. Arduino is connected to the COM3 port of the computer. The following code was written to use the sensor and data flow was provided from the sensor through the COM3 port.
+
+![arduino](https://user-images.githubusercontent.com/97105233/171728344-be8a9b39-58bd-46b9-8b5b-11cf34ad4a81.png)
+
 ```c++
 const int trigPin = 9;
 const int echoPin = 10;
@@ -45,3 +48,6 @@ LINX is a toolbox that allows us to use development boards such as arduino with 
 
 ## Step 3: VI Design
 Three different ranges were determined for the condition of the suspensions. In cases where the distance between the car and the ground is less than 10 cm, the suspension will be stiffened, when it is between 10 and 20 cm, the suspension will work normally, and when it exceeds 20 cm, the suspension will be loosened. Decision mechanisms were established for these three different situations and leds were created for these situations on the front panel. Through the LINX toolbox we have installed, the sensor data we received from the arduino was transferred to the labview and the front panel, which will change according to this distance data, was created.
+
+<img src="https://user-images.githubusercontent.com/97105233/171728496-bd2baf78-6a6c-4229-902c-ee940b32cf48.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/97105233/171728545-41be8e6c-5501-4925-979d-c7bc079244c9.png" width="90%"></img> 
+
